@@ -22,6 +22,11 @@ config :live_grdn_app, LiveGrdnAppWeb.Endpoint,
   pubsub_server: LiveGrdnApp.PubSub,
   live_view: [signing_salt: "q3mB7YoK"]
 
+config :live_grdn_app, LiveGdnAppWeb.Auth.Guardian,
+  issuer: "live_grdn_app",
+  secret_key:  "bZyuQiIbqIJdnefTQTLdp4dLHfeUqmSfbuC8u0bT1w3GKNGMZL5Q9wFBXl+jO4R/",
+  claims: LiveGrdnAppWeb.Auth.Guardian
+
 # Configures the mailer
 #
 # By default it uses the "Local" adapter which stores the emails
